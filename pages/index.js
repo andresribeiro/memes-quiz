@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styled from "styled-components";
 import db from "../db.json";
 
@@ -5,7 +6,6 @@ import Widget from "../src/components/Widget";
 import QuizBackground from "../src/components/QuizBackground";
 import Footer from "../src/components/Footer";
 import GitHubCorner from "../src/components/GitHubCorner";
-import { delBasePath } from "next/dist/next-server/lib/router/router";
 
 export const QuizContainer = styled.div`
   margin: auto 10%;
@@ -22,30 +22,35 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <Widget>
-          <Widget.Content>
-            <Widget.Header>
-              <h1>Lorem ipsulum</h1>
-            </Widget.Header>
+    <>
+      <Head>
+        <meta property="og:image" content={db.bg} />
+      </Head>
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <Widget>
+            <Widget.Content>
+              <Widget.Header>
+                <h1>Lorem ipsulum</h1>
+              </Widget.Header>
 
-            <p>Lorem ipsulum dolor sit amet...</p>
-          </Widget.Content>
-        </Widget>
+              <p>Lorem ipsulum dolor sit amet...</p>
+            </Widget.Content>
+          </Widget>
 
-        <Widget>
-          <Widget.Content>
-            <Widget.Header>
-              <h1>Lorem ipsulum</h1>
-            </Widget.Header>
+          <Widget>
+            <Widget.Content>
+              <Widget.Header>
+                <h1>Lorem ipsulum</h1>
+              </Widget.Header>
 
-            <p>Lorem ipsulum dolor sit amet...</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/andresribeiro" />
-    </QuizBackground>
+              <p>Lorem ipsulum dolor sit amet...</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/andresribeiro" />
+      </QuizBackground>
+    </>
   );
 }
