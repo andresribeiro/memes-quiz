@@ -2,27 +2,16 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-import styled from "styled-components";
-import db from "../db.json";
-
 import Widget from "../src/components/Widget";
+import QuizContainer from "../src/components/QuizContainer";
 import QuizBackground from "../src/components/QuizBackground";
 import QuizLogo from "../src/components/QuizLogo";
 import Footer from "../src/components/Footer";
 import GitHubCorner from "../src/components/GitHubCorner";
+import Input from "../src/components/Input";
+import Button from "../src/components/Button";
 
-export const QuizContainer = styled.div`
-  margin: auto 10%;
-  padding-top: 45px;
-
-  width: 100%;
-  max-width: 350px;
-
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import db from "../db.json";
 
 export default function Home() {
   const router = useRouter();
@@ -50,16 +39,16 @@ export default function Home() {
                   router.push(`/quiz?name=${name}`);
                 }}
               >
-                <input
+                <Input
+                  name="nomeDoUsuario"
                   placeholder="Diz aí seu nome"
-                  onChange={(event) => {
-                    setName(event.target.value);
-                  }}
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
                 />
 
-                <button type="submit" disabled={name.length === 0}>
+                <Button type="submit" disabled={name.length === 0}>
                   {name.length === 0 ? "Jogar" : `Jogar como ${name}`}
-                </button>
+                </Button>
               </form>
             </Widget.Content>
           </Widget>

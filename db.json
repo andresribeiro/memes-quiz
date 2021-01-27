@@ -1,24 +1,21 @@
 {
   "bg": "https://images.unsplash.com/photo-1601382270349-49c15bddf738?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "Quiz sobre Memes",
+  "description": "Teste os seus conhecimentos sobre memes e vamos ver se você é hardware",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
+      "image": "https://media.giphy.com/media/11d11t7w8xjE9W/giphy.gif",
+      "title": "Qual personagem de filme/série virou meme com sorrisos e a música de fundo \"Wait a Minute\"?",
+      "description": "Bara riu rai now rai nou wai nai just su in a coul owoou",
       "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
+      "alternatives": ["Homer Simpson", "Thomas Shelby", "Gru", "Fred Jones"]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://media.giphy.com/media/l41YfqSvs7oeBMO6Q/giphy.gif",
+      "title": "Quando veio da Venezuela seu nome mudou. Qual o verdadeiro nome do Davy Jones?",
+      "description": "Ele foi adotado pelo Alanzoka",
       "answer": 0,
-      "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
-      ]
+      "alternatives": ["Elimar González", "Lorenzo", "Santiago", "Ruan"]
     }
   ],
   "external": [""],
