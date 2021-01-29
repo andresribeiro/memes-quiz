@@ -1,14 +1,13 @@
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react";
 
-import AlternativesForm from "../src/components/AlternativesForm";
-import Button from "../src/components/Button";
-import QuizContainer from "../src/components/QuizContainer";
-import QuizBackground from "../src/components/QuizBackground";
-import QuizLogo from "../src/components/QuizLogo";
-import Widget from "../src/components/Widget";
-
-import db from "../db.json";
+import AlternativesForm from "../../components/AlternativesForm";
+import Button from "../../components/Button";
+import BackLinkArrow from "../../components/BackLinkArrow";
+import QuizContainer from "../../components/QuizContainer";
+import QuizBackground from "../../components/QuizBackground";
+import QuizLogo from "../../components/QuizLogo";
+import Widget from "../../components/Widget";
 
 function LoadingWidget() {
   return (
@@ -43,6 +42,7 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, han
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h3>
           Pergunta {questionIndex + 1} de {totalQuestions}
         </h3>
@@ -121,15 +121,15 @@ const screenStates = {
   RESULT: "RESULT",
 };
 
-export default function Quiz() {
+export default function Quiz({ externalQuestions, externalBg }) {
   const router = useRouter()
 
   const { name }  = router.query
 
-  const totalQuestions = db.questions.length;
+  const totalQuestions = externalQuestions.length;
 	const [questionIndex, setQuestionIndex] = useState(0);
 	const [results, setResults] = useState(0)
-	const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
 
   const [screenState, setScreenState] = useState(screenStates.LOADING);
 
@@ -156,7 +156,7 @@ export default function Quiz() {
   }, []);
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={externalBg}>
       <QuizContainer>
         <QuizLogo />
 

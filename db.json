@@ -16,9 +16,27 @@
       "description": "Ele foi adotado pelo Alanzoka",
       "answer": 0,
       "alternatives": ["Elimar González", "Lorenzo", "Santiago", "Ruan"]
+    },
+    {
+      "image": "https://media.giphy.com/media/LXONhtCmN32YU/giphy.gif",
+      "title": "Qual grande grupo de memes do Facebook tinha/tem um selo escrito \"Cópia não comédia\"?",
+      "description": "Lembre-se do pica-pau em um navio chamando pelo seu tio",
+      "answer": 3,
+      "alternatives": ["iFunny", "Avon Brasil", "Site dos Menes", "South America Memes (SAM)"]
+    },
+    {
+      "image": "https://media.giphy.com/media/LXONhtCmN32YU/giphy.gif",
+      "title": "Qual personagem virou meme com as famosas Frases Mario Ayala?",
+      "description": "Ele tinha um cachorro chamado Rabito",
+      "answer": 0,
+      "alternatives": ["Mario Ayala", "Cirilo", "Binho", "Billy Bruto"]
     }
   ],
-  "external": [""],
+  "external": [
+    "https://mrrobot-quiz.xandowski.vercel.app/",
+    "https://chessquiz-alura.leo0liveira.vercel.app",
+    "https://naruto-quiz.llofyy.vercel.app/"
+  ],
   "theme": {
     "colors": {
       "primary": "#0d47a1",
